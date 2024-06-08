@@ -1,0 +1,97 @@
+/**
+ * Código utilizado para el curso de Estructuras de Datos.
+ *
+ * Se permite consultarlo para fines didácticos de forma personal, pero no está
+ * permitido transferirlo tal cual a estudiantes actuales o potenciales pues se
+ * afectará su realización de los ejercicios.
+ */
+
+package edd.banco;
+
+import java.io.IOException;
+
+import java.util.Random;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.NoSuchElementException;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+import edd.Calificador;
+import edd.RandomStringGenerator;
+
+import edd.readerwriter.ReaderWriter;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
+
+/**
+ * @author mindahrelfen
+ */
+public class TramiteTest extends Calificador {
+
+    @Override
+    protected void setCategories() {
+        defineCategories(new String[] {
+            "lectura",
+            "busqueda"
+        }, new double[] {
+            0.4,
+            0.6
+        });
+    }
+
+    @Test
+    public void lecturaTest() {
+        Tramite[] tramites;
+
+        startTest("Revisa que el arreglo de tramites obtenido encaje con el archivo .json", 1.0, "lectura");
+
+        try {
+            String inputJSON = ReaderWriter.readLines("tramites.json");
+
+            Type listOfMyClassObject = new TypeToken<ArrayList<Tramite>>() {}.getType();
+            Gson gson = new Gson();
+            List<Tramite> list = gson.fromJson(inputJSON, listOfMyClassObject);
+            tramites = Tramite.tramites();
+
+            int i = 0;
+            for (Tramite t: list) {
+                assertTrue(!t.equals(null));
+                assertTrue(!t.equals(""));
+                assertTrue(t.equals(tramites[i++]));
+            }
+        } catch (IOException e) {
+            assertTrue("Lanzo IOException".equals(null));
+        }
+
+        addUp(1.0);
+        passed();
+    }
+
+    @Test
+    public void busquedaTest() {
+        Tramite[] tramites;
+        Tramite aux;
+        String s;
+
+        startTest("Revisa que el arreglo de tramites obtenido busque y encuentre tramites particulares correctamente", 1.0, "busqueda");
+
+        tramites = Tramite.tramites();
+
+        for (Tramite t: tramites) {
+            s = t.getNombre();
+
+            aux = Tramite.tramite(s);
+            assertTrue(!aux.equals(s));
+            assertTrue(!aux.equals(null));
+            assertTrue(aux.equals(t));
+        }
+
+        addUp(1.0);
+        passed();
+    }
+}

@@ -1,0 +1,1042 @@
+[
+    {
+        "cliente": {
+            "tramite": "retiro efectivo",
+            "hora": 8,
+            "minuto": 19
+        },
+        "empleado": {
+            "id": "0",
+            "velocidad": 0.46469026304234823,
+            "atendidos": 3
+        },
+        "horaEntrada": 8,
+        "minutoEntrada": 19,
+        "horaSalida": 8,
+        "minutoSalida": 22
+    },
+    {
+        "cliente": {
+            "tramite": "manejo de chequera",
+            "hora": 8,
+            "minuto": 19
+        },
+        "empleado": {
+            "id": "1",
+            "velocidad": 1.8675512352055814,
+            "atendidos": 3
+        },
+        "horaEntrada": 8,
+        "minutoEntrada": 19,
+        "horaSalida": 8,
+        "minutoSalida": 41
+    },
+    {
+        "cliente": {
+            "tramite": "manejo de chequera",
+            "hora": 8,
+            "minuto": 25
+        },
+        "empleado": {
+            "id": "2",
+            "velocidad": 0.9015945217236413,
+            "atendidos": 3
+        },
+        "horaEntrada": 8,
+        "minutoEntrada": 25,
+        "horaSalida": 8,
+        "minutoSalida": 30
+    },
+    {
+        "cliente": {
+            "tramite": "pago impuestos referenciado",
+            "hora": 8,
+            "minuto": 31
+        },
+        "empleado": {
+            "id": "3",
+            "velocidad": 1.0227529404781208,
+            "atendidos": 3
+        },
+        "horaEntrada": 8,
+        "minutoEntrada": 31,
+        "horaSalida": 8,
+        "minutoSalida": 40
+    },
+    {
+        "cliente": {
+            "tramite": "pago impuestos referenciado",
+            "hora": 8,
+            "minuto": 45
+        },
+        "empleado": {
+            "id": "4",
+            "velocidad": 0.7477441867339403,
+            "atendidos": 3
+        },
+        "horaEntrada": 8,
+        "minutoEntrada": 45,
+        "horaSalida": 8,
+        "minutoSalida": 46
+    },
+    {
+        "cliente": {
+            "tramite": "apertura credito",
+            "hora": 8,
+            "minuto": 51
+        },
+        "empleado": {
+            "id": "5",
+            "velocidad": 0.5890137268238113,
+            "atendidos": 3
+        },
+        "horaEntrada": 8,
+        "minutoEntrada": 51,
+        "horaSalida": 9,
+        "minutoSalida": 10
+    },
+    {
+        "cliente": {
+            "tramite": "apertura credito",
+            "hora": 8,
+            "minuto": 54
+        },
+        "empleado": {
+            "id": "6",
+            "velocidad": 0.4176503749905569,
+            "atendidos": 3
+        },
+        "horaEntrada": 8,
+        "minutoEntrada": 54,
+        "horaSalida": 9,
+        "minutoSalida": 4
+    },
+    {
+        "cliente": {
+            "tramite": "pago impuestos referenciado",
+            "hora": 9,
+            "minuto": 17
+        },
+        "empleado": {
+            "id": "7",
+            "velocidad": 2.373868165232417,
+            "atendidos": 3
+        },
+        "horaEntrada": 9,
+        "minutoEntrada": 17,
+        "horaSalida": 9,
+        "minutoSalida": 48
+    },
+    {
+        "cliente": {
+            "tramite": "consulta tarjeta credito",
+            "hora": 9,
+            "minuto": 25
+        },
+        "empleado": {
+            "id": "8",
+            "velocidad": 0.7306131355011408,
+            "atendidos": 3
+        },
+        "horaEntrada": 9,
+        "minutoEntrada": 25,
+        "horaSalida": 9,
+        "minutoSalida": 34
+    },
+    {
+        "cliente": {
+            "tramite": "transferencia",
+            "hora": 9,
+            "minuto": 25
+        },
+        "empleado": {
+            "id": "9",
+            "velocidad": 2.181842610434069,
+            "atendidos": 3
+        },
+        "horaEntrada": 9,
+        "minutoEntrada": 25,
+        "horaSalida": 9,
+        "minutoSalida": 32
+    },
+    {
+        "cliente": {
+            "tramite": "manejo de chequera",
+            "hora": 9,
+            "minuto": 30
+        },
+        "empleado": {
+            "id": "10",
+            "velocidad": 1.2005588554262676,
+            "atendidos": 3
+        },
+        "horaEntrada": 9,
+        "minutoEntrada": 30,
+        "horaSalida": 9,
+        "minutoSalida": 41
+    },
+    {
+        "cliente": {
+            "tramite": "ventanilla general",
+            "hora": 9,
+            "minuto": 43
+        },
+        "empleado": {
+            "id": "11",
+            "velocidad": 0.3802149866464148,
+            "atendidos": 3
+        },
+        "horaEntrada": 9,
+        "minutoEntrada": 43,
+        "horaSalida": 9,
+        "minutoSalida": 45
+    },
+    {
+        "cliente": {
+            "tramite": "consulta tarjeta debito",
+            "hora": 9,
+            "minuto": 50
+        },
+        "empleado": {
+            "id": "12",
+            "velocidad": 1.379752287535923,
+            "atendidos": 3
+        },
+        "horaEntrada": 9,
+        "minutoEntrada": 50,
+        "horaSalida": 9,
+        "minutoSalida": 57
+    },
+    {
+        "cliente": {
+            "tramite": "consulta tarjeta debito",
+            "hora": 9,
+            "minuto": 57
+        },
+        "empleado": {
+            "id": "13",
+            "velocidad": 0.5037418222430897,
+            "atendidos": 3
+        },
+        "horaEntrada": 9,
+        "minutoEntrada": 57,
+        "horaSalida": 9,
+        "minutoSalida": 59
+    },
+    {
+        "cliente": {
+            "tramite": "consulta tarjeta credito",
+            "hora": 10,
+            "minuto": 0
+        },
+        "empleado": {
+            "id": "14",
+            "velocidad": 0.38043629146012337,
+            "atendidos": 3
+        },
+        "horaEntrada": 10,
+        "minutoEntrada": 0,
+        "horaSalida": 10,
+        "minutoSalida": 4
+    },
+    {
+        "cliente": {
+            "tramite": "actualizacion datos",
+            "hora": 10,
+            "minuto": 4
+        },
+        "empleado": {
+            "id": "15",
+            "velocidad": 0.6112599525346161,
+            "atendidos": 3
+        },
+        "horaEntrada": 10,
+        "minutoEntrada": 4,
+        "horaSalida": 10,
+        "minutoSalida": 22
+    },
+    {
+        "cliente": {
+            "tramite": "pago impuestos referenciado",
+            "hora": 10,
+            "minuto": 7
+        },
+        "empleado": {
+            "id": "16",
+            "velocidad": 1.7252739930411798,
+            "atendidos": 3
+        },
+        "horaEntrada": 10,
+        "minutoEntrada": 7,
+        "horaSalida": 10,
+        "minutoSalida": 16
+    },
+    {
+        "cliente": {
+            "tramite": "manejo de chequera",
+            "hora": 10,
+            "minuto": 9
+        },
+        "empleado": {
+            "id": "17",
+            "velocidad": 0.5267828209485989,
+            "atendidos": 2
+        },
+        "horaEntrada": 10,
+        "minutoEntrada": 9,
+        "horaSalida": 10,
+        "minutoSalida": 13
+    },
+    {
+        "cliente": {
+            "tramite": "manejo de chequera",
+            "hora": 10,
+            "minuto": 10
+        },
+        "empleado": {
+            "id": "18",
+            "velocidad": 2.314644272370809,
+            "atendidos": 2
+        },
+        "horaEntrada": 10,
+        "minutoEntrada": 10,
+        "horaSalida": 10,
+        "minutoSalida": 22
+    },
+    {
+        "cliente": {
+            "tramite": "transferencia",
+            "hora": 10,
+            "minuto": 20
+        },
+        "empleado": {
+            "id": "19",
+            "velocidad": 2.2817893297902283,
+            "atendidos": 2
+        },
+        "horaEntrada": 10,
+        "minutoEntrada": 20,
+        "horaSalida": 10,
+        "minutoSalida": 29
+    },
+    {
+        "cliente": {
+            "tramite": "consulta tarjeta debito",
+            "hora": 10,
+            "minuto": 51
+        },
+        "empleado": {
+            "id": "20",
+            "velocidad": 1.982432488863838,
+            "atendidos": 2
+        },
+        "horaEntrada": 10,
+        "minutoEntrada": 51,
+        "horaSalida": 11,
+        "minutoSalida": 7
+    },
+    {
+        "cliente": {
+            "tramite": "retiro efectivo",
+            "hora": 10,
+            "minuto": 58
+        },
+        "empleado": {
+            "id": "21",
+            "velocidad": 0.8854667496478442,
+            "atendidos": 2
+        },
+        "horaEntrada": 10,
+        "minutoEntrada": 58,
+        "horaSalida": 11,
+        "minutoSalida": 10
+    },
+    {
+        "cliente": {
+            "tramite": "pago tarjeta de credito",
+            "hora": 11,
+            "minuto": 1
+        },
+        "empleado": {
+            "id": "22",
+            "velocidad": 0.45163171400050567,
+            "atendidos": 2
+        },
+        "horaEntrada": 11,
+        "minutoEntrada": 1,
+        "horaSalida": 11,
+        "minutoSalida": 8
+    },
+    {
+        "cliente": {
+            "tramite": "pago credito",
+            "hora": 11,
+            "minuto": 4
+        },
+        "empleado": {
+            "id": "23",
+            "velocidad": 0.385300196296949,
+            "atendidos": 2
+        },
+        "horaEntrada": 11,
+        "minutoEntrada": 4,
+        "horaSalida": 11,
+        "minutoSalida": 11
+    },
+    {
+        "cliente": {
+            "tramite": "apertura chequera",
+            "hora": 11,
+            "minuto": 7
+        },
+        "empleado": {
+            "id": "0",
+            "velocidad": 0.46469026304234823,
+            "atendidos": 3
+        },
+        "horaEntrada": 11,
+        "minutoEntrada": 7,
+        "horaSalida": 11,
+        "minutoSalida": 22
+    },
+    {
+        "cliente": {
+            "tramite": "pago impuestos referenciado",
+            "hora": 11,
+            "minuto": 31
+        },
+        "empleado": {
+            "id": "1",
+            "velocidad": 1.8675512352055814,
+            "atendidos": 3
+        },
+        "horaEntrada": 11,
+        "minutoEntrada": 31,
+        "horaSalida": 11,
+        "minutoSalida": 35
+    },
+    {
+        "cliente": {
+            "tramite": "pago impuestos referenciado",
+            "hora": 11,
+            "minuto": 36
+        },
+        "empleado": {
+            "id": "2",
+            "velocidad": 0.9015945217236413,
+            "atendidos": 3
+        },
+        "horaEntrada": 11,
+        "minutoEntrada": 36,
+        "horaSalida": 11,
+        "minutoSalida": 41
+    },
+    {
+        "cliente": {
+            "tramite": "transferencia",
+            "hora": 11,
+            "minuto": 39
+        },
+        "empleado": {
+            "id": "3",
+            "velocidad": 1.0227529404781208,
+            "atendidos": 3
+        },
+        "horaEntrada": 11,
+        "minutoEntrada": 39,
+        "horaSalida": 11,
+        "minutoSalida": 46
+    },
+    {
+        "cliente": {
+            "tramite": "pago impuestos referenciado",
+            "hora": 11,
+            "minuto": 47
+        },
+        "empleado": {
+            "id": "4",
+            "velocidad": 0.7477441867339403,
+            "atendidos": 3
+        },
+        "horaEntrada": 11,
+        "minutoEntrada": 47,
+        "horaSalida": 11,
+        "minutoSalida": 49
+    },
+    {
+        "cliente": {
+            "tramite": "pago credito",
+            "hora": 11,
+            "minuto": 56
+        },
+        "empleado": {
+            "id": "5",
+            "velocidad": 0.5890137268238113,
+            "atendidos": 3
+        },
+        "horaEntrada": 11,
+        "minutoEntrada": 56,
+        "horaSalida": 12,
+        "minutoSalida": 7
+    },
+    {
+        "cliente": {
+            "tramite": "transferencia",
+            "hora": 12,
+            "minuto": 0
+        },
+        "empleado": {
+            "id": "6",
+            "velocidad": 0.4176503749905569,
+            "atendidos": 3
+        },
+        "horaEntrada": 12,
+        "minutoEntrada": 0,
+        "horaSalida": 12,
+        "minutoSalida": 5
+    },
+    {
+        "cliente": {
+            "tramite": "pago tarjeta de credito",
+            "hora": 12,
+            "minuto": 8
+        },
+        "empleado": {
+            "id": "7",
+            "velocidad": 2.373868165232417,
+            "atendidos": 3
+        },
+        "horaEntrada": 12,
+        "minutoEntrada": 8,
+        "horaSalida": 12,
+        "minutoSalida": 25
+    },
+    {
+        "cliente": {
+            "tramite": "pago impuestos referenciado",
+            "hora": 12,
+            "minuto": 15
+        },
+        "empleado": {
+            "id": "8",
+            "velocidad": 0.7306131355011408,
+            "atendidos": 3
+        },
+        "horaEntrada": 12,
+        "minutoEntrada": 15,
+        "horaSalida": 12,
+        "minutoSalida": 22
+    },
+    {
+        "cliente": {
+            "tramite": "apertura cuenta",
+            "hora": 12,
+            "minuto": 17
+        },
+        "empleado": {
+            "id": "9",
+            "velocidad": 2.181842610434069,
+            "atendidos": 3
+        },
+        "horaEntrada": 12,
+        "minutoEntrada": 17,
+        "horaSalida": 12,
+        "minutoSalida": 54
+    },
+    {
+        "cliente": {
+            "tramite": "deposito cheque",
+            "hora": 12,
+            "minuto": 22
+        },
+        "empleado": {
+            "id": "10",
+            "velocidad": 1.2005588554262676,
+            "atendidos": 3
+        },
+        "horaEntrada": 12,
+        "minutoEntrada": 22,
+        "horaSalida": 12,
+        "minutoSalida": 39
+    },
+    {
+        "cliente": {
+            "tramite": "deposito nomina",
+            "hora": 12,
+            "minuto": 28
+        },
+        "empleado": {
+            "id": "11",
+            "velocidad": 0.3802149866464148,
+            "atendidos": 3
+        },
+        "horaEntrada": 12,
+        "minutoEntrada": 28,
+        "horaSalida": 12,
+        "minutoSalida": 29
+    },
+    {
+        "cliente": {
+            "tramite": "deposito nomina",
+            "hora": 12,
+            "minuto": 38
+        },
+        "empleado": {
+            "id": "12",
+            "velocidad": 1.379752287535923,
+            "atendidos": 3
+        },
+        "horaEntrada": 12,
+        "minutoEntrada": 38,
+        "horaSalida": 12,
+        "minutoSalida": 59
+    },
+    {
+        "cliente": {
+            "tramite": "deposito nomina",
+            "hora": 12,
+            "minuto": 47
+        },
+        "empleado": {
+            "id": "13",
+            "velocidad": 0.5037418222430897,
+            "atendidos": 3
+        },
+        "horaEntrada": 12,
+        "minutoEntrada": 47,
+        "horaSalida": 12,
+        "minutoSalida": 54
+    },
+    {
+        "cliente": {
+            "tramite": "pago credito",
+            "hora": 13,
+            "minuto": 4
+        },
+        "empleado": {
+            "id": "14",
+            "velocidad": 0.38043629146012337,
+            "atendidos": 3
+        },
+        "horaEntrada": 13,
+        "minutoEntrada": 4,
+        "horaSalida": 13,
+        "minutoSalida": 12
+    },
+    {
+        "cliente": {
+            "tramite": "pago credito",
+            "hora": 13,
+            "minuto": 21
+        },
+        "empleado": {
+            "id": "15",
+            "velocidad": 0.6112599525346161,
+            "atendidos": 3
+        },
+        "horaEntrada": 13,
+        "minutoEntrada": 21,
+        "horaSalida": 13,
+        "minutoSalida": 32
+    },
+    {
+        "cliente": {
+            "tramite": "pago tarjeta de credito",
+            "hora": 13,
+            "minuto": 25
+        },
+        "empleado": {
+            "id": "16",
+            "velocidad": 1.7252739930411798,
+            "atendidos": 3
+        },
+        "horaEntrada": 13,
+        "minutoEntrada": 25,
+        "horaSalida": 13,
+        "minutoSalida": 39
+    },
+    {
+        "cliente": {
+            "tramite": "consulta tarjeta debito",
+            "hora": 13,
+            "minuto": 30
+        },
+        "empleado": {
+            "id": "17",
+            "velocidad": 0.5267828209485989,
+            "atendidos": 2
+        },
+        "horaEntrada": 13,
+        "minutoEntrada": 30,
+        "horaSalida": 13,
+        "minutoSalida": 32
+    },
+    {
+        "cliente": {
+            "tramite": "deposito cheque",
+            "hora": 13,
+            "minuto": 31
+        },
+        "empleado": {
+            "id": "18",
+            "velocidad": 2.314644272370809,
+            "atendidos": 2
+        },
+        "horaEntrada": 13,
+        "minutoEntrada": 31,
+        "horaSalida": 13,
+        "minutoSalida": 36
+    },
+    {
+        "cliente": {
+            "tramite": "pago impuestos referenciado",
+            "hora": 13,
+            "minuto": 39
+        },
+        "empleado": {
+            "id": "19",
+            "velocidad": 2.2817893297902283,
+            "atendidos": 2
+        },
+        "horaEntrada": 13,
+        "minutoEntrada": 39,
+        "horaSalida": 13,
+        "minutoSalida": 48
+    },
+    {
+        "cliente": {
+            "tramite": "pago impuestos referenciado",
+            "hora": 13,
+            "minuto": 41
+        },
+        "empleado": {
+            "id": "20",
+            "velocidad": 1.982432488863838,
+            "atendidos": 2
+        },
+        "horaEntrada": 13,
+        "minutoEntrada": 41,
+        "horaSalida": 13,
+        "minutoSalida": 59
+    },
+    {
+        "cliente": {
+            "tramite": "apertura credito",
+            "hora": 13,
+            "minuto": 50
+        },
+        "empleado": {
+            "id": "21",
+            "velocidad": 0.8854667496478442,
+            "atendidos": 2
+        },
+        "horaEntrada": 13,
+        "minutoEntrada": 50,
+        "horaSalida": 14,
+        "minutoSalida": 13
+    },
+    {
+        "cliente": {
+            "tramite": "pago impuestos referenciado",
+            "hora": 13,
+            "minuto": 58
+        },
+        "empleado": {
+            "id": "22",
+            "velocidad": 0.45163171400050567,
+            "atendidos": 2
+        },
+        "horaEntrada": 13,
+        "minutoEntrada": 58,
+        "horaSalida": 14,
+        "minutoSalida": 4
+    },
+    {
+        "cliente": {
+            "tramite": "deposito efectivo",
+            "hora": 14,
+            "minuto": 0
+        },
+        "empleado": {
+            "id": "23",
+            "velocidad": 0.385300196296949,
+            "atendidos": 2
+        },
+        "horaEntrada": 14,
+        "minutoEntrada": 0,
+        "horaSalida": 14,
+        "minutoSalida": 4
+    },
+    {
+        "cliente": {
+            "tramite": "manejo de chequera",
+            "hora": 14,
+            "minuto": 9
+        },
+        "empleado": {
+            "id": "0",
+            "velocidad": 0.46469026304234823,
+            "atendidos": 3
+        },
+        "horaEntrada": 14,
+        "minutoEntrada": 9,
+        "horaSalida": 14,
+        "minutoSalida": 12
+    },
+    {
+        "cliente": {
+            "tramite": "consulta tarjeta debito",
+            "hora": 14,
+            "minuto": 12
+        },
+        "empleado": {
+            "id": "1",
+            "velocidad": 1.8675512352055814,
+            "atendidos": 3
+        },
+        "horaEntrada": 14,
+        "minutoEntrada": 12,
+        "horaSalida": 14,
+        "minutoSalida": 29
+    },
+    {
+        "cliente": {
+            "tramite": "apertura credito",
+            "hora": 14,
+            "minuto": 17
+        },
+        "empleado": {
+            "id": "2",
+            "velocidad": 0.9015945217236413,
+            "atendidos": 3
+        },
+        "horaEntrada": 14,
+        "minutoEntrada": 17,
+        "horaSalida": 14,
+        "minutoSalida": 49
+    },
+    {
+        "cliente": {
+            "tramite": "apertura cuenta",
+            "hora": 14,
+            "minuto": 36
+        },
+        "empleado": {
+            "id": "3",
+            "velocidad": 1.0227529404781208,
+            "atendidos": 3
+        },
+        "horaEntrada": 14,
+        "minutoEntrada": 36,
+        "horaSalida": 15,
+        "minutoSalida": 4
+    },
+    {
+        "cliente": {
+            "tramite": "manejo de chequera",
+            "hora": 14,
+            "minuto": 39
+        },
+        "empleado": {
+            "id": "4",
+            "velocidad": 0.7477441867339403,
+            "atendidos": 3
+        },
+        "horaEntrada": 14,
+        "minutoEntrada": 39,
+        "horaSalida": 14,
+        "minutoSalida": 50
+    },
+    {
+        "cliente": {
+            "tramite": "apertura chequera",
+            "hora": 14,
+            "minuto": 51
+        },
+        "empleado": {
+            "id": "5",
+            "velocidad": 0.5890137268238113,
+            "atendidos": 3
+        },
+        "horaEntrada": 14,
+        "minutoEntrada": 51,
+        "horaSalida": 15,
+        "minutoSalida": 7
+    },
+    {
+        "cliente": {
+            "tramite": "consulta tarjeta debito",
+            "hora": 14,
+            "minuto": 56
+        },
+        "empleado": {
+            "id": "6",
+            "velocidad": 0.4176503749905569,
+            "atendidos": 3
+        },
+        "horaEntrada": 14,
+        "minutoEntrada": 56,
+        "horaSalida": 14,
+        "minutoSalida": 57
+    },
+    {
+        "cliente": {
+            "tramite": "apertura cuenta",
+            "hora": 14,
+            "minuto": 59
+        },
+        "empleado": {
+            "id": "7",
+            "velocidad": 2.373868165232417,
+            "atendidos": 3
+        },
+        "horaEntrada": 14,
+        "minutoEntrada": 59,
+        "horaSalida": 15,
+        "minutoSalida": 35
+    },
+    {
+        "cliente": {
+            "tramite": "deposito cheque",
+            "hora": 15,
+            "minuto": 0
+        },
+        "empleado": {
+            "id": "8",
+            "velocidad": 0.7306131355011408,
+            "atendidos": 3
+        },
+        "horaEntrada": 15,
+        "minutoEntrada": 0,
+        "horaSalida": 15,
+        "minutoSalida": 1
+    },
+    {
+        "cliente": {
+            "tramite": "apertura credito",
+            "hora": 15,
+            "minuto": 16
+        },
+        "empleado": {
+            "id": "9",
+            "velocidad": 2.181842610434069,
+            "atendidos": 3
+        },
+        "horaEntrada": 15,
+        "minutoEntrada": 16,
+        "horaSalida": 16,
+        "minutoSalida": 41
+    },
+    {
+        "cliente": {
+            "tramite": "retiro efectivo",
+            "hora": 15,
+            "minuto": 22
+        },
+        "empleado": {
+            "id": "10",
+            "velocidad": 1.2005588554262676,
+            "atendidos": 3
+        },
+        "horaEntrada": 15,
+        "minutoEntrada": 22,
+        "horaSalida": 15,
+        "minutoSalida": 27
+    },
+    {
+        "cliente": {
+            "tramite": "consulta tarjeta credito",
+            "hora": 15,
+            "minuto": 26
+        },
+        "empleado": {
+            "id": "11",
+            "velocidad": 0.3802149866464148,
+            "atendidos": 3
+        },
+        "horaEntrada": 15,
+        "minutoEntrada": 26,
+        "horaSalida": 15,
+        "minutoSalida": 28
+    },
+    {
+        "cliente": {
+            "tramite": "actualizacion datos",
+            "hora": 15,
+            "minuto": 32
+        },
+        "empleado": {
+            "id": "12",
+            "velocidad": 1.379752287535923,
+            "atendidos": 3
+        },
+        "horaEntrada": 15,
+        "minutoEntrada": 32,
+        "horaSalida": 16,
+        "minutoSalida": 19
+    },
+    {
+        "cliente": {
+            "tramite": "manejo de chequera",
+            "hora": 15,
+            "minuto": 46
+        },
+        "empleado": {
+            "id": "13",
+            "velocidad": 0.5037418222430897,
+            "atendidos": 3
+        },
+        "horaEntrada": 15,
+        "minutoEntrada": 46,
+        "horaSalida": 15,
+        "minutoSalida": 50
+    },
+    {
+        "cliente": {
+            "tramite": "apertura cuenta",
+            "hora": 15,
+            "minuto": 48
+        },
+        "empleado": {
+            "id": "14",
+            "velocidad": 0.38043629146012337,
+            "atendidos": 3
+        },
+        "horaEntrada": 15,
+        "minutoEntrada": 48,
+        "horaSalida": 15,
+        "minutoSalida": 56
+    },
+    {
+        "cliente": {
+            "tramite": "deposito cheque",
+            "hora": 15,
+            "minuto": 51
+        },
+        "empleado": {
+            "id": "15",
+            "velocidad": 0.6112599525346161,
+            "atendidos": 3
+        },
+        "horaEntrada": 15,
+        "minutoEntrada": 51,
+        "horaSalida": 15,
+        "minutoSalida": 55
+    },
+    {
+        "cliente": {
+            "tramite": "pago credito",
+            "hora": 15,
+            "minuto": 56
+        },
+        "empleado": {
+            "id": "16",
+            "velocidad": 1.7252739930411798,
+            "atendidos": 3
+        },
+        "horaEntrada": 15,
+        "minutoEntrada": 56,
+        "horaSalida": 16,
+        "minutoSalida": 18
+    }
+]

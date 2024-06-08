@@ -1,0 +1,192 @@
+/**
+ * Código utilizado para el curso de Estructuras de Datos.
+ *
+ * Se permite consultarlo para fines didácticos de forma personal, pero no está
+ * permitido transferirlo tal cual a estudiantes actuales o potenciales pues se
+ * afectará su realización de los ejercicios.
+ */
+
+package edd.banco;
+
+import java.io.IOException;
+
+import java.util.Random;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.NoSuchElementException;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+import edd.Calificador;
+import edd.RandomStringGenerator;
+
+import edd.readerwriter.ReaderWriter;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
+
+/**
+ * @author mindahrelfen
+ */
+public class ClienteTest extends Calificador {
+
+    @Override
+    protected void setCategories() {
+        defineCategories(new String[] {
+            "size",
+            "tramite",
+            "hora",
+            "minuto"
+        }, new double[] {
+            0.1,
+            0.3,
+            0.5,
+            0.1
+        });
+    }
+
+    @Test
+    public void sizeTest() {
+        int size;
+        Cliente[] clientes;
+
+        startTest("Revisa que el arreglo de clientes generado sea del tamaño indicado (min: 50 clientes, max: 500 clientes)", 1.0, "size");
+
+        size = rdm.nextInt(450) + 50;
+        clientes = Cliente.generate(size);
+
+        assertTrue(size == clientes.length);
+
+        addUp(1.0);
+        passed();
+    }
+
+    @Test
+    public void tramiteTest() {
+        int size;
+        Cliente[] clientes;
+        boolean encontrado;
+        String s;
+
+        startTest("Revisa que el arreglo de clientes generado tenga tramites definidos por el .json (min: 50 clientes, max: 500 clientes", 1.0, "tramite");
+
+        try {
+            size = rdm.nextInt(450) + 50;
+            clientes = Cliente.generate(size);
+
+            String inputJSON = ReaderWriter.readLines("tramites.json");
+
+            Type listOfMyClassObject = new TypeToken<ArrayList<Tramite>>() {}.getType();
+            Gson gson = new Gson();
+            List<Tramite> list = gson.fromJson(inputJSON, listOfMyClassObject);
+
+            for (int i = 0; i < clientes.length; i++) {
+                s = clientes[i].getTramite();
+
+                encontrado = false;
+                for (Tramite t: list) {
+                    if (t.getNombre().equals(s)) {
+                        encontrado = true;
+                        break;
+                    }
+                }
+
+                assertTrue(encontrado);
+            }
+        } catch (IOException e) {
+            assertTrue("Lanzo IOException".equals(null));
+        }
+
+        addUp(1.0);
+        passed();
+    }
+
+    @Test
+    public void esperaTest() {
+        int size;
+        Cliente[] clientes;
+        int hora, minuto, aux, h, m;
+
+        double[] DISTRIBUCION = Cliente.DISTRIBUCION;
+
+        startTest("Revisa el tiempo de espera se consistente", 1.0, "hora");
+
+        size = rdm.nextInt(400) + 100;
+        clientes = Cliente.generate(size);
+
+        for (Cliente e: clientes) {
+            hora = e.getHora();
+            minuto = e.getMinuto();
+            h = Cliente.HORA_INICIO + DISTRIBUCION.length - hora;
+            h = rdm.nextInt(h);
+
+            if (h == 0) {
+                m = 60 - minuto;
+                m = rdm.nextInt(m);
+            } else {
+                m = rdm.nextInt(60);
+            }
+
+            aux = h * 60 + m;
+
+            assertTrue(e.tiempoEspera(h + hora, m + minuto) == aux);
+        }
+
+        addUp(1.0);
+        passed();
+    }
+
+    @Test
+    public void horaTest() {
+        int size;
+        Cliente[] clientes;
+        int[] distribucion;
+        int aux;
+
+        double[] DISTRIBUCION = Cliente.DISTRIBUCION;
+
+        startTest("Revisa que el arreglo de clientes generado tenga la distribucion de horas aproximada (20% error) (min: 50 clientes, max: 500)", 1.0, "hora");
+
+        size = rdm.nextInt(400) + 100;
+        clientes = Cliente.generate(size);
+        distribucion = new int[DISTRIBUCION.length];
+
+        for (Cliente e: clientes) {
+            aux = e.getHora();
+
+            distribucion[aux - Cliente.HORA_INICIO]++;
+        }
+
+        for (int i = 0; i < distribucion.length; i++) {
+            assertTrue((DISTRIBUCION[i] * size * 1.2) >= distribucion[i]);
+        }
+
+        addUp(1.0);
+        passed();
+    }
+
+    @Test
+    public void minutoTest() {
+        int size;
+        Cliente[] clientes;
+        int minuto;
+
+        startTest("Revisa que los minutos del arreglo de clientes generados sean aleatorios y en [0, 59] (min: 50 clientes, max: 500 clientes)", 1.0, "minuto");
+
+        size = rdm.nextInt(450) + 50;
+        clientes = Cliente.generate(size);
+
+        for (Cliente e: clientes) {
+            for (int i = 0; i < size; i++) {
+                minuto = e.getMinuto();
+                assertTrue(0 <= minuto && minuto <= 59);
+            }
+        }
+
+        addUp(1.0);
+        passed();
+    }
+}

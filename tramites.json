@@ -1,0 +1,98 @@
+[
+    {
+        "nombre": "ventanilla general",
+        "tipo": "ventanilla",
+        "minimo": "3",
+        "maximo": "16"
+    },
+    {
+        "nombre": "deposito efectivo",
+        "tipo": "ventanilla",
+        "minimo": "2",
+        "maximo": "13"
+    },
+    {
+        "nombre": "deposito cheque",
+        "tipo": "ventanilla",
+        "minimo": "2",
+        "maximo": "15"
+    },
+    {
+        "nombre": "deposito nomina",
+        "tipo": "ventanilla",
+        "minimo": "2",
+        "maximo": "16"
+    },
+    {
+        "nombre": "transferencia",
+        "tipo": "ventanilla",
+        "minimo": "2",
+        "maximo": "17"
+    },
+    {
+        "nombre": "retiro efectivo",
+        "tipo": "ventanilla",
+        "minimo": "2",
+        "maximo": "15"
+    },
+    {
+        "nombre": "pago impuestos referenciado",
+        "tipo": "ventanilla",
+        "minimo": "2",
+        "maximo": "15"
+    },
+    {
+        "nombre": "pago tarjeta de credito",
+        "tipo": "ventanilla",
+        "minimo": "2",
+        "maximo": "16"
+    },
+    {
+        "nombre": "manejo de chequera",
+        "tipo": "ventanilla",
+        "minimo": "5",
+        "maximo": "19"
+    },
+    {
+        "nombre": "consulta tarjeta debito",
+        "tipo": "ventanilla",
+        "minimo": "2",
+        "maximo": "14"
+    },
+    {
+        "nombre": "consulta tarjeta credito",
+        "tipo": "ventanilla",
+        "minimo": "3",
+        "maximo": "14"
+    },
+    {
+        "nombre": "apertura cuenta",
+        "tipo": "asesor",
+        "minimo": "15",
+        "maximo": "38"
+    },
+    {
+        "nombre": "apertura chequera",
+        "tipo": "asesor",
+        "minimo": "20",
+        "maximo": "43"
+    },
+    {
+        "nombre": "apertura credito",
+        "tipo": "asesor",
+        "minimo": "25",
+        "maximo": "48"
+    },
+    {
+        "nombre": "pago credito",
+        "tipo": "asesor",
+        "minimo": "8",
+        "maximo": "26"
+    },
+    {
+        "nombre": "actualizacion datos",
+        "tipo": "asesor",
+        "minimo": "15",
+        "maximo": "35"
+    }
+  ]

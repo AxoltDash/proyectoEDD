@@ -1,0 +1,151 @@
+/**
+ * Código utilizado para el curso de Estructuras de Datos.
+ *
+ * Se permite consultarlo para fines didácticos de forma personal, pero no está
+ * permitido transferirlo tal cual a estudiantes actuales o potenciales pues se
+ * afectará su realización de los ejercicios.
+ */
+
+package edd.banco;
+
+import java.io.IOException;
+
+import java.util.Random;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+import edd.Calificador;
+
+/**
+ * @author mindahrelfen
+ */
+public class EmpleadoTest extends Calificador {
+
+    @Override
+    protected void setCategories() {
+        defineCategories(new String[] {
+            "id",
+            "size",
+            "atendidos",
+            "distribucion"
+        }, new double[] {
+            0.3,
+            0.1,
+            0.1,
+            0.5
+        });
+    }
+
+    @Test
+    public void sizeTest() {
+        int size;
+        Empleado[] empleados;
+
+        startTest("Revisa que el arreglo de empleados generado sea del tamaño indicado (min: 50 empleados, max: 500 empleados)", 1.0, "size");
+
+        size = rdm.nextInt(450) + 50;
+        empleados = Empleado.generate(size);
+
+        assertTrue(size == empleados.length);
+
+        addUp(1.0);
+        passed();
+    }
+
+    @Test
+    public void idTest() {
+        int size;
+        Empleado[] empleados;
+        String id;
+
+        startTest("Revisa que el arreglo de empleados generado tenga identificadores unicos (min: 50 empleados, max: 500 empleados)", 1.0, "id");
+
+        size = rdm.nextInt(450) + 50;
+        empleados = Empleado.generate(size);
+
+        for (int i = 0; i < empleados.length; i++) {
+            id = empleados[i].getID();
+
+            for (int j = i + 1; j < empleados.length; j++) {
+                assertTrue(!id.equals(empleados[j].getID()));
+            }
+        }
+
+        addUp(1.0);
+        passed();
+    }
+
+    @Test
+    public void atendidosZeroTest() {
+        int size;
+        Empleado[] empleados;
+        String id;
+
+        startTest("Revisa que el arreglo de empleados generado tenga cero atendidos en todas sus instancias (min: 50 empleados, max: 500 empleados)", 1.0, "atendidos");
+
+        size = rdm.nextInt(450) + 50;
+        empleados = Empleado.generate(size);
+
+        for (Empleado e: empleados) {
+            assertTrue(e.getAtendidos() == 0);
+        }
+
+        addUp(1.0);
+        passed();
+    }
+
+    @Test
+    public void atendidosIncreaseTest() {
+        int size;
+        Empleado[] empleados;
+        String id;
+
+        startTest("Revisa que el increaseAtendidos de empleados incremente en unoel numero de atendidos (min: 50 empleados, max: 500 empleados)", 1.0, "atendidos");
+
+        size = rdm.nextInt(450) + 50;
+        empleados = Empleado.generate(1);
+
+        for (Empleado e: empleados) {
+            for (int i = 0; i < size; i++) {
+                assertTrue(e.getAtendidos() == i);
+                e.increaseAtendidos();
+            }
+        }
+
+        addUp(1.0);
+        passed();
+    }
+
+    @Test
+    public void distribucionTest() {
+        int size;
+        Empleado[] empleados;
+        int[] distribucion;
+        double aux;
+        int max;
+
+        startTest("Revisa que el arreglo de empleados generado tenga la distribucion de velocidad aproximada (20% error) (min: 50 empleados, max: 100)", 1.0, "distribucion");
+
+        max = rdm.nextInt(5) + 5;
+        size = max * 10;
+        empleados = Empleado.generate(size);
+        distribucion = new int[size];
+
+        for (Empleado e: empleados) {
+            aux = e.getVelocidad();
+            aux = Math.log(aux);
+            aux = aux + 1;
+            aux = aux / 2;
+            aux = aux * size;
+
+            distribucion[(int)aux]++;
+        }
+
+        for (int i = 0; i < distribucion.length; i++) {
+            assertTrue((max * 1.2) >= distribucion[i]);
+        }
+        addUp(1.0);
+        passed();
+    }
+}

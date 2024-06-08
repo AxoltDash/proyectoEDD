@@ -1,0 +1,327 @@
+[
+    {
+        "tramite": "pago impuestos referenciado",
+        "hora": 12,
+        "minuto": 15
+    },
+    {
+        "tramite": "manejo de chequera",
+        "hora": 10,
+        "minuto": 10
+    },
+    {
+        "tramite": "retiro efectivo",
+        "hora": 8,
+        "minuto": 19
+    },
+    {
+        "tramite": "pago impuestos referenciado",
+        "hora": 13,
+        "minuto": 39
+    },
+    {
+        "tramite": "deposito cheque",
+        "hora": 15,
+        "minuto": 0
+    },
+    {
+        "tramite": "pago impuestos referenciado",
+        "hora": 10,
+        "minuto": 7
+    },
+    {
+        "tramite": "deposito efectivo",
+        "hora": 14,
+        "minuto": 0
+    },
+    {
+        "tramite": "apertura cuenta",
+        "hora": 15,
+        "minuto": 48
+    },
+    {
+        "tramite": "deposito cheque",
+        "hora": 13,
+        "minuto": 31
+    },
+    {
+        "tramite": "apertura credito",
+        "hora": 8,
+        "minuto": 51
+    },
+    {
+        "tramite": "actualizacion datos",
+        "hora": 10,
+        "minuto": 4
+    },
+    {
+        "tramite": "apertura cuenta",
+        "hora": 14,
+        "minuto": 36
+    },
+    {
+        "tramite": "pago tarjeta de credito",
+        "hora": 12,
+        "minuto": 8
+    },
+    {
+        "tramite": "transferencia",
+        "hora": 10,
+        "minuto": 20
+    },
+    {
+        "tramite": "pago credito",
+        "hora": 13,
+        "minuto": 4
+    },
+    {
+        "tramite": "manejo de chequera",
+        "hora": 15,
+        "minuto": 46
+    },
+    {
+        "tramite": "apertura cuenta",
+        "hora": 14,
+        "minuto": 59
+    },
+    {
+        "tramite": "consulta tarjeta debito",
+        "hora": 14,
+        "minuto": 56
+    },
+    {
+        "tramite": "apertura credito",
+        "hora": 15,
+        "minuto": 16
+    },
+    {
+        "tramite": "manejo de chequera",
+        "hora": 8,
+        "minuto": 25
+    },
+    {
+        "tramite": "consulta tarjeta credito",
+        "hora": 10,
+        "minuto": 0
+    },
+    {
+        "tramite": "actualizacion datos",
+        "hora": 15,
+        "minuto": 32
+    },
+    {
+        "tramite": "consulta tarjeta credito",
+        "hora": 9,
+        "minuto": 25
+    },
+    {
+        "tramite": "apertura credito",
+        "hora": 14,
+        "minuto": 17
+    },
+    {
+        "tramite": "pago impuestos referenciado",
+        "hora": 13,
+        "minuto": 41
+    },
+    {
+        "tramite": "deposito cheque",
+        "hora": 15,
+        "minuto": 51
+    },
+    {
+        "tramite": "pago tarjeta de credito",
+        "hora": 13,
+        "minuto": 25
+    },
+    {
+        "tramite": "deposito cheque",
+        "hora": 12,
+        "minuto": 22
+    },
+    {
+        "tramite": "pago credito",
+        "hora": 11,
+        "minuto": 4
+    },
+    {
+        "tramite": "manejo de chequera",
+        "hora": 10,
+        "minuto": 9
+    },
+    {
+        "tramite": "apertura credito",
+        "hora": 8,
+        "minuto": 54
+    },
+    {
+        "tramite": "pago impuestos referenciado",
+        "hora": 11,
+        "minuto": 31
+    },
+    {
+        "tramite": "consulta tarjeta debito",
+        "hora": 9,
+        "minuto": 57
+    },
+    {
+        "tramite": "deposito nomina",
+        "hora": 12,
+        "minuto": 47
+    },
+    {
+        "tramite": "pago impuestos referenciado",
+        "hora": 11,
+        "minuto": 36
+    },
+    {
+        "tramite": "transferencia",
+        "hora": 12,
+        "minuto": 0
+    },
+    {
+        "tramite": "retiro efectivo",
+        "hora": 10,
+        "minuto": 58
+    },
+    {
+        "tramite": "consulta tarjeta debito",
+        "hora": 9,
+        "minuto": 50
+    },
+    {
+        "tramite": "apertura cuenta",
+        "hora": 12,
+        "minuto": 17
+    },
+    {
+        "tramite": "consulta tarjeta debito",
+        "hora": 13,
+        "minuto": 30
+    },
+    {
+        "tramite": "manejo de chequera",
+        "hora": 8,
+        "minuto": 19
+    },
+    {
+        "tramite": "manejo de chequera",
+        "hora": 14,
+        "minuto": 39
+    },
+    {
+        "tramite": "consulta tarjeta debito",
+        "hora": 10,
+        "minuto": 51
+    },
+    {
+        "tramite": "manejo de chequera",
+        "hora": 14,
+        "minuto": 9
+    },
+    {
+        "tramite": "pago credito",
+        "hora": 11,
+        "minuto": 56
+    },
+    {
+        "tramite": "pago impuestos referenciado",
+        "hora": 8,
+        "minuto": 31
+    },
+    {
+        "tramite": "pago impuestos referenciado",
+        "hora": 11,
+        "minuto": 47
+    },
+    {
+        "tramite": "pago impuestos referenciado",
+        "hora": 8,
+        "minuto": 45
+    },
+    {
+        "tramite": "apertura chequera",
+        "hora": 11,
+        "minuto": 7
+    },
+    {
+        "tramite": "pago impuestos referenciado",
+        "hora": 13,
+        "minuto": 58
+    },
+    {
+        "tramite": "pago tarjeta de credito",
+        "hora": 11,
+        "minuto": 1
+    },
+    {
+        "tramite": "consulta tarjeta credito",
+        "hora": 15,
+        "minuto": 26
+    },
+    {
+        "tramite": "deposito nomina",
+        "hora": 12,
+        "minuto": 28
+    },
+    {
+        "tramite": "deposito nomina",
+        "hora": 12,
+        "minuto": 38
+    },
+    {
+        "tramite": "consulta tarjeta debito",
+        "hora": 14,
+        "minuto": 12
+    },
+    {
+        "tramite": "pago credito",
+        "hora": 15,
+        "minuto": 56
+    },
+    {
+        "tramite": "transferencia",
+        "hora": 11,
+        "minuto": 39
+    },
+    {
+        "tramite": "apertura chequera",
+        "hora": 14,
+        "minuto": 51
+    },
+    {
+        "tramite": "retiro efectivo",
+        "hora": 15,
+        "minuto": 22
+    },
+    {
+        "tramite": "pago credito",
+        "hora": 13,
+        "minuto": 21
+    },
+    {
+        "tramite": "ventanilla general",
+        "hora": 9,
+        "minuto": 43
+    },
+    {
+        "tramite": "manejo de chequera",
+        "hora": 9,
+        "minuto": 30
+    },
+    {
+        "tramite": "transferencia",
+        "hora": 9,
+        "minuto": 25
+    },
+    {
+        "tramite": "pago impuestos referenciado",
+        "hora": 9,
+        "minuto": 17
+    },
+    {
+        "tramite": "apertura credito",
+        "hora": 13,
+        "minuto": 50
+    }
+]
