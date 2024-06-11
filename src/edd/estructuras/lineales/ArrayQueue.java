@@ -4,44 +4,75 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * Implementación de una cola basada en arreglos.
+ */
 public class ArrayQueue<E> implements Queue<E> {
     
+    /**
+     * Arreglo que almacena los elementos de la cola.
+     */
     private E[] element;
-    private int maximo; //maximo de elementos del arreglo
-    private int front;  //frente
-    private int rear;   //fondo
-    private int size;   //tamano
+    
+    /**
+     * Capacidad máxima del arreglo.
+     */
+    private int maximo;
+    
+    /**
+     * Índice del frente de la cola.
+     */
+    private int front;
+    
+    /**
+     * Índice del fondo de la cola.
+     */
+    private int rear;
+    
+    /**
+     * Tamaño actual de la cola.
+     */
+    private int size;
 
+    /**
+     * Constructor que inicializa la cola con una capacidad específica.
+     *
+     * @param m Capacidad máxima de la cola.
+     */
     public ArrayQueue(int m) {
         this.maximo = m;
         element = (E[]) new Object[maximo];
         front = 0;
-        rear = maximo -1;
+        rear = maximo - 1;
         size = 0;
     }
-    public ArrayQueue(){
+
+    /**
+     * Constructor por defecto que inicializa la cola con una capacidad de 16.
+     */
+    public ArrayQueue() {
         this(16);
     }
 
     @Override 
-    public int size(){
+    public int size() {
         return size;
     }
 
     @Override
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return size == 0;
     }
 
     @Override
-    public E first(){
+    public E first() {
         return isEmpty() ? null : element[front];
     }
 
-    @Override //insert
-    public void enqueue(E e){
-        if (size == maximo){
-            throw new RuntimeException("La cola llena");
+    @Override
+    public void enqueue(E e) {
+        if (size == maximo) {
+            throw new RuntimeException("La cola está llena");
         }
         rear = (rear + 1) % maximo;
         element[rear] = e;
@@ -49,8 +80,8 @@ public class ArrayQueue<E> implements Queue<E> {
     }
 
     @Override
-    public E dequeue(){
-        if (isEmpty()){
+    public E dequeue() {
+        if (isEmpty()) {
             return null;
         }
 
@@ -81,6 +112,9 @@ public class ArrayQueue<E> implements Queue<E> {
         return new ArrayQueueIterator();
     }
 
+    /**
+     * Clase interna que implementa el iterador para la cola.
+     */
     private class ArrayQueueIterator implements Iterator<E> {
         private int currentIndex = front;
         private int remaining = size;

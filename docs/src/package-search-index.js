@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"edd"},{"l":"edd.banco"},{"l":"edd.colors"},{"l":"edd.estructuras.lineales"},{"l":"edd.readerwriter"}]

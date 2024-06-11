@@ -15,40 +15,39 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase que simula la gestión de turnos en un banco.
+ */
 public class Buscador {
 
     private Reporte reporte = new Reporte();
 
     private Cliente[] clientes;
     private Empleado[] empleados;
-    // private Tramite[] tramites;
 
     private int ultimoTurno;
     private Turno[] turnos;
 
-    // private Queue<Turno> turnos;
-
-    // private PriorityQueue<Cliente> clientesPorAtender;
     private Queue<Cliente> clientesPorAtender;
     private PriorityQueue<Empleado> empleadosDisponibles;
     private PriorityQueue<Turno> turnosAtendiendo;
 
     int horaActual;
     int minutoActual;
-    
-    //BUSCADOR
-    //VICHCIS CLASE
-    // TypeToken<ArrayList<Cliente>>() {}.getType();
-    public Buscador(){
+
+    /**
+     * Constructor que inicializa los clientes y empleados leyendo desde archivos JSON.
+     */
+    public Buscador() {
         clientes = null;
         empleados = null;
         
         try {
             String inputJSON = ReaderWriter.readLines("clientes.json");
 
-            Type listOfMyClassObject = new TypeToken<java.util.ArrayList<Cliente>>() {}.getType();
+            Type listOfMyClassObject = new TypeToken<ArrayList<Cliente>>() {}.getType();
             Gson gson = new Gson();
-            java.util.List<Cliente> list = gson.fromJson(inputJSON, listOfMyClassObject);
+            List<Cliente> list = gson.fromJson(inputJSON, listOfMyClassObject);
 
             clientes = new Cliente[list.size()];
             for (int i = 0; i < list.size(); i++) {
@@ -57,14 +56,14 @@ public class Buscador {
 
         } catch (IOException e) {
             clientes = null;
-        } 
+        }
 
         try {
             String inputJSON = ReaderWriter.readLines("empleados.json");
 
-            Type listOfMyClassObject = new TypeToken<java.util.ArrayList<Empleado>>() {}.getType();
+            Type listOfMyClassObject = new TypeToken<ArrayList<Empleado>>() {}.getType();
             Gson gson = new Gson();
-            java.util.List<Empleado> list = gson.fromJson(inputJSON, listOfMyClassObject);
+            List<Empleado> list = gson.fromJson(inputJSON, listOfMyClassObject);
 
             empleados = new Empleado[list.size()];
             for (int i = 0; i < list.size(); i++) {
@@ -73,10 +72,15 @@ public class Buscador {
 
         } catch (IOException e) {
             empleados = null;
-        } 
+        }
     }
 
-    public void generarClientes(int size){
+    /**
+     * Genera una lista de clientes y guarda en un archivo JSON.
+     *
+     * @param size El número de clientes a generar.
+     */
+    public void generarClientes(int size) {
         Gson gson = new Gson();
 
         clientes = Cliente.generate(size);
@@ -86,32 +90,52 @@ public class Buscador {
         save(indenta(gson.toJson(clientes)), "clientes.json");
     }
 
-    public void generarEmpleados(int size){
+    /**
+     * Genera una lista de empleados y guarda en un archivo JSON.
+     *
+     * @param size El número de empleados a generar.
+     */
+    public void generarEmpleados(int size) {
         Gson gson = new Gson();
 
         empleados = Empleado.generate(size);
         save(indenta(gson.toJson(empleados)), "empleados.json");
     }
 
-    public int cantidadClientes(){
+    /**
+     * Devuelve la cantidad de clientes.
+     *
+     * @return El número de clientes o -1 si no hay clientes.
+     */
+    public int cantidadClientes() {
         if (clientes == null)
             return -1;
         return clientes.length;
     }
 
-    public int cantidadEmpleados(){
+    /**
+     * Devuelve la cantidad de empleados.
+     *
+     * @return El número de empleados o -1 si no hay empleados.
+     */
+    public int cantidadEmpleados() {
         if (empleados == null)
             return -1;
         return empleados.length;
     }
 
-    //sacado vilchiz 14 09
+    /**
+     * Indenta una cadena JSON para hacerla más legible.
+     *
+     * @param str La cadena JSON a indentar.
+     * @return La cadena JSON indentada.
+     */
     private static String indenta(String str) {
         StringBuilder sb = new StringBuilder();
         String indentacion = "";
 
         for (int i = 0; i < str.length(); i++) {
-            switch(str.charAt(i)) {
+            switch (str.charAt(i)) {
                 case ':':
                     sb.append(str.charAt(i));
                     sb.append(" ");
@@ -140,34 +164,42 @@ public class Buscador {
         return sb.toString();
     }
 
-    private void save (String json, String fileName){
-        try{
+    /**
+     * Guarda una cadena en un archivo.
+     *
+     * @param json     La cadena JSON a guardar.
+     * @param fileName El nombre del archivo donde se guardará la cadena.
+     */
+    private void save(String json, String fileName) {
+        try {
             ReaderWriter.writeLines(fileName, json);
         } catch (IOException e) {
             System.out.println(e);
         }
     }
 
+    /**
+     * Carga los datos iniciales y organiza los clientes y empleados en colas.
+     */
     public void load() {
-        clientesPorAtender = (Queue<Cliente>)new LinkedQueue();
+        clientesPorAtender = (Queue<Cliente>) new LinkedQueue();
         empleadosDisponibles = new PriorityQueue();
         turnosAtendiendo = new PriorityQueue();
 
         for (int i = 1; i < clientes.length; i++) {
             for (int j = i; j > 0 && clientes[j].compareTo(clientes[j - 1]) < 0; j--) {
-                
                 Cliente aux = clientes[j];
                 clientes[j] = clientes[j - 1];
                 clientes[j - 1] = aux;
-            } 
-        } 
+            }
+        }
 
         for (Cliente c : clientes) {
-            clientesPorAtender.enqueue(c); 
+            clientesPorAtender.enqueue(c);
         }
 
         for (Empleado e : empleados) {
-            empleadosDisponibles.enqueue(e); 
+            empleadosDisponibles.enqueue(e);
         }
 
         horaActual = Cliente.HORA_INICIO;
@@ -175,30 +207,38 @@ public class Buscador {
         turnos = new Turno[clientes.length];
         ultimoTurno = 0;
 
-        //NEW ====================
+        // Inicializa el reporte
         reporte = new Reporte();
-        //========================
     }
 
-    //DIos, soi yo de nuevo
+    /**
+     * Asigna un cliente a un empleado y actualiza los turnos.
+     *
+     * @param c El cliente a calendarizar.
+     */
     public void calendariza(Cliente c) {
         int hora = c.getHora();
         int minuto = c.getMinuto();
         int valC = hora * 60 + minuto;
         int valActual = horaActual * 60 + minutoActual;
 
-        if (valActual < valC) 
-            actualiza(hora, minuto); 
-        
-        Empleado empleado = (Empleado)empleadosDisponibles.dequeue();
+        if (valActual < valC)
+            actualiza(hora, minuto);
+
+        Empleado empleado = empleadosDisponibles.dequeue();
         clientesPorAtender.dequeue();
 
         Turno t = new Turno(c, empleado, horaActual, minutoActual);
-        
+
         reporte.agregarTurno(t);
         turnosAtendiendo.enqueue(t);
     }
-    //DIos, soi yo de nuevo nuevo
+
+    /**
+     * Completa un turno y actualiza el estado del empleado.
+     *
+     * @param t El turno a completar.
+     */
     public void calendariza(Turno t) {
         int hora = t.getHoraSalida();
         int minuto = t.getMinutoSalida();
@@ -207,7 +247,7 @@ public class Buscador {
 
         if (valActual < valT)
             actualiza(hora, minuto);
-        
+
         t.getEmpleado().increaseAtendidos();
 
         empleadosDisponibles.enqueue(t.getEmpleado());
@@ -216,11 +256,17 @@ public class Buscador {
         turnos[ultimoTurno++] = t;
     }
 
+    /**
+     * Determina si un cliente puede ser atendido antes que un turno existente.
+     *
+     * @param c El cliente a evaluar.
+     * @param t El turno existente.
+     * @return Verdadero si el cliente puede ser atendido primero, falso en caso contrario.
+     */
     public boolean first(Cliente c, Turno t) {
-
         if (t == null)
             return true;
-        
+
         int cHora = c.getHora();
         int cMinuto = c.getMinuto();
         int cVal = cHora * 60 + cMinuto;
@@ -229,24 +275,31 @@ public class Buscador {
         int tMinuto = t.getMinutoSalida();
         int tVal = tHora * 60 + tMinuto;
 
-        if (cVal < tVal && !empleadosDisponibles.isEmpty())
-            return true;
-        
-        return false;
+        return cVal < tVal && !empleadosDisponibles.isEmpty();
     }
-    
-    //NUEVO MET. ACTUALIZA (Mas facil que hacerlo cada vez xd)
+
+    /**
+     * Actualiza la hora y el minuto actuales.
+     *
+     * @param hora   La nueva hora.
+     * @param minuto El nuevo minuto.
+     */
     private void actualiza(int hora, int minuto) {
         while (minuto > 59) {
-          minuto -= 60;
-          hora++;
-        } 
+            minuto -= 60;
+            hora++;
+        }
 
         this.horaActual = hora;
         this.minutoActual = minuto;
     }
-    
-    public int simular(){
+
+    /**
+     * Simula el proceso de atención de clientes y guarda los resultados.
+     *
+     * @return 0 si la simulación se completó con éxito, 1 si no hay clientes, 2 si no hay empleados.
+     */
+    public int simular() {
         Cliente siguienteCliente;
         Turno turnoActual;
 
@@ -254,14 +307,14 @@ public class Buscador {
             return 1;
         if (cantidadEmpleados() == -1)
             return 2;
-        
+
         load();
 
         while (!clientesPorAtender.isEmpty()) {
             siguienteCliente = clientesPorAtender.first();
             turnoActual = turnosAtendiendo.first();
-        
-            if (first(siguienteCliente, turnoActual)){
+
+            if (first(siguienteCliente, turnoActual)) {
                 calendariza(siguienteCliente);
             } else {
                 calendariza(turnoActual);
@@ -272,11 +325,10 @@ public class Buscador {
             calendariza(turnosAtendiendo.first());
         }
 
-        //dejo mi bendicion para que el dios computologo compile correctamente
         Gson gson = new Gson();
         save(indenta(gson.toJson(empleados)), "empleados_simulacion.json");
         save(indenta(gson.toJson(turnos)), "turnos.json");
-        save(indenta(gson.toJson(reporte    )), "reporte.json");
+        save(indenta(gson.toJson(reporte)), "reporte.json");
 
         return 0;
     }

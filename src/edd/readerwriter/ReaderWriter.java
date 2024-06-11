@@ -7,13 +7,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-// import java.util.Iterator;
-
-// import edd.estructuras.lineales.ArrayList;
-// import edd.estructuras.lineales.List;
-
+/**
+ * Clase utilitaria para leer y escribir archivos de texto.
+ */
 public class ReaderWriter {
 
+    /**
+     * Escribe las líneas dadas en un archivo especificado.
+     * 
+     * @param fileName El nombre del archivo donde se escribirán las líneas.
+     * @param lines    Las líneas de texto que se escribirán en el archivo.
+     * @throws IOException Si ocurre un error de entrada/salida al escribir en el archivo.
+     */
     public static void writeLines(String fileName, String lines) throws IOException {
         BufferedWriter bufferedWriter = new BufferedWriter(new PrintWriter(new File(fileName)));
 
@@ -23,6 +28,13 @@ public class ReaderWriter {
         bufferedWriter.close();
     }
 
+    /**
+     * Lee todas las líneas de un archivo especificado y las devuelve como una cadena de texto.
+     * 
+     * @param fileName El nombre del archivo del que se leerán las líneas.
+     * @return Una cadena que contiene todas las líneas leídas del archivo.
+     * @throws IOException Si ocurre un error de entrada/salida al leer el archivo.
+     */
     public static String readLines(String fileName) throws IOException {
         String line;
         StringBuilder sb = new StringBuilder();

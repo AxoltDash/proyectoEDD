@@ -12,8 +12,6 @@ package edd.colors;
  * Agregado toString() para obtener un String con el formato dado.
  * 
  * @author Mindahrelfen
- * 
- * Modificado por:
  * @author AxoltDash
  */
 public class Colors {
@@ -252,6 +250,8 @@ public class Colors {
      *
      * @param l       Longitud de la linea, el numero de simbolos que se imprimiran.
      * @param format  Formato.
+     * 
+     * @return        Linea de lineas que se regresa
      *
      * @throws IllegalArgumentException Si la longitud especificada es menor o igual a cero.
      */
@@ -276,8 +276,8 @@ public class Colors {
     /**
      * Obtiene un String <code>s</code> con el formato dado
      * 
-     * @param s
-     * @param format
+     * @param s     Mensaje que se obtiene para convertir a String
+     * @param format Formato que se aplica
      * @return String ya con codigo de color
      */
     public static final String toString(Object s, String format){

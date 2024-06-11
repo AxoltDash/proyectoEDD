@@ -10,9 +10,16 @@ import edd.banco.Tramite;
  */
 public class PriorityQueue<E> implements Queue<E> {
 
-            public static Tramite tramite(Tramite tramite) {
-                return tramite;
-            }
+    /**
+     * Método estático que devuelve un trámite.
+     * 
+     * @param tramite Objeto tramite que se inserta
+     * @return tramite Objeto que se devuelve
+     */
+    public static Tramite tramite(Tramite tramite) {
+        return tramite;
+    }
+
     /**
      * Referencia a la cabeza de la cola.
      */
@@ -73,10 +80,16 @@ public class PriorityQueue<E> implements Queue<E> {
 
     @Override
     public void enqueue(E e) {
-        // Default priority if not specified
+        // Prioridad predeterminada si no se especifica
         enqueue(e, 0);
     }
 
+    /**
+     * Método para encolar un elemento con una prioridad específica.
+     * 
+     * @param e Objeto que se encolará
+     * @param priority Prioridad que presenta para encolar
+     */
     public void enqueue(E e, int priority) {
         SNode<E> newNode = new SNode<>();
         newNode.elem = e;
@@ -143,8 +156,7 @@ public class PriorityQueue<E> implements Queue<E> {
         protected boolean canRemove;
 
         /**
-         * Constructor por defecto. Inicializa el iterador a la cabeza de la
-         * cola.
+         * Constructor por defecto. Inicializa el iterador a la cabeza de la cola.
          */
         public PriorityQueueIterator() {
             actual = head;
@@ -188,6 +200,9 @@ public class PriorityQueue<E> implements Queue<E> {
         }
     }
 
+    /**
+     * Clase interna que representa un nodo de la cola.
+     */
     class SNode<E> {
 
         /**

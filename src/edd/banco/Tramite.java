@@ -8,12 +8,12 @@ import java.io.IOException;
 
 import edd.readerwriter.ReaderWriter;
 
-// import edd.estructuras.lineales.ArrayList;
-// import edd.estructuras.lineales.List;
-
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+ * Clase que representa un trámite en el sistema de turnos del banco.
+ */
 public class Tramite {
 
     private String nombre;
@@ -22,6 +22,14 @@ public class Tramite {
     private int maximo;
     private static Tramite[] tramites = null;
 
+    /**
+     * Constructor para crear un trámite con los parámetros especificados.
+     * 
+     * @param nombre El nombre del trámite.
+     * @param tipo El tipo del trámite (por ejemplo, "ventanilla" o "asesor").
+     * @param minimo El tiempo mínimo requerido para el trámite.
+     * @param maximo El tiempo máximo requerido para el trámite.
+     */
     public Tramite(String nombre, String tipo, int minimo, int maximo) {
         this.nombre = nombre;
         this.tipo = tipo;
@@ -45,6 +53,7 @@ public class Tramite {
         return maximo;
     }
 
+    @Override
     public boolean equals(Object t) {
         
         if (!(t instanceof Tramite)) return false;
@@ -73,16 +82,17 @@ public class Tramite {
         
         return true; // Si pasa todo
     }
-    
+
+    /**
+     * Obtiene una lista de todos los trámites cargados desde un archivo JSON.
+     * 
+     * @return Un arreglo de objetos Tramite.
+     */
     public static Tramite[] tramites() {
         if (tramites != null)
             return tramites; 
         try {
             String inputJSON = ReaderWriter.readLines("tramites.json");
-            
-            // Type listOfMyClassObject = new TypeToken<ArrayList<Tramite>>() {}.getType();
-            // Gson gson = new Gson();
-            // List<Tramite> list = gson.fromJson(inputJSON, listOfMyClassObject);
 
             Type listOfMyClassObject = new TypeToken<java.util.ArrayList<Tramite>>() {}.getType();
             Gson gson = new Gson();
@@ -98,8 +108,14 @@ public class Tramite {
             System.out.println(e);
             return null;
         } 
-    } 
+    }
 
+    /**
+     * Obtiene un trámite específico por su nombre.
+     * 
+     * @param tramite El nombre del trámite a buscar.
+     * @return El objeto Tramite correspondiente, o null si no se encuentra.
+     */
     public static Tramite tramite(String tramite) {
         if (tramites == null) {
             tramites(); 

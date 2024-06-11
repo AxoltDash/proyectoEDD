@@ -57,6 +57,7 @@ public class ArrayList<E> implements List<E> {
      * Si el indice es invalido lanza una excepcion IndexOutOfBoundsException.
      *
      * @param index Indice a revisar
+     * @param max Indice maximo
      */
     protected void checkIndex(int index, int max) throws IndexOutOfBoundsException {
         if (index < 0 || index >= max) {

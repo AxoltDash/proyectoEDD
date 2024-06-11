@@ -1,7 +1,5 @@
-
 package edd;
 
-// import java.util.Random;
 import java.util.Scanner;
 
 import edd.colors.Colors;
@@ -52,7 +50,7 @@ public class Prueba {
         StringBuilder sb = new StringBuilder();
             sb.append("\n");
             sb.append(Colors.equalslineString(39,Colors.BLUE));
-            sb.append(Colors.toString("Por favor, seleccione una opcion:", Colors.WHITE + Colors.HIGH_INTENSITY) + "\n");
+            sb.append(Colors.toString("Por favor, seleccione una opcion:", Colors.CYAN + Colors.HIGH_INTENSITY) + "\n");
             sb.append(Colors.toString("1.\t", Colors.CYAN + Colors.HIGH_INTENSITY));
             sb.append(Colors.toString("Generar Empleados.\n", Colors.HIGH_INTENSITY));
             sb.append(Colors.toString("2.\t", Colors.CYAN + Colors.HIGH_INTENSITY));
@@ -63,7 +61,6 @@ public class Prueba {
             sb.append(Colors.equalslineString(19,Colors.BLACK));
             sb.append(Colors.toString("0.\t", Colors.BLUE + Colors.HIGH_INTENSITY));
             sb.append(Colors.toString("Salir.\n", Colors.HIGH_INTENSITY));
-            sb.append("\n");
         menuSb = sb.toString();
 
         sb = new StringBuilder();
@@ -77,7 +74,6 @@ public class Prueba {
             sb.append(Colors.equalslineString(19,Colors.BLACK));
             sb.append(Colors.toString("0.\t", Colors.BLUE + Colors.HIGH_INTENSITY));
             sb.append(Colors.toString("Regresar.\n", Colors.HIGH_INTENSITY));
-            sb.append("\n");
         ynSb = sb.toString();
 
         String cyan = Colors.CYAN + Colors.HIGH_INTENSITY;
@@ -95,7 +91,7 @@ public class Prueba {
                         if (opcion2 != 1)
                             break;
                     }
-                    b.generarEmpleados (getInt(Colors.toString("Cuantos empleados desearía generar?", cyan) + Colors.toString("[1, 2147483647]", Colors.BLUE + Colors.HIGH_INTENSITY), error, 1, 2147483647));
+                    b.generarEmpleados (getInt(Colors.toString("Cuantos empleados desearía generar?", cyan) + Colors.toString(" [1, 2147483647]", Colors.BLUE + Colors.HIGH_INTENSITY), error, 1, 2147483647));
                     break;
 
                 case 2:
@@ -106,7 +102,7 @@ public class Prueba {
                         if (opcion2 != 1)
                             break; 
                     }                     
-                    b.generarClientes(getInt(Colors.toString("Cuantos clientes desearía generar? ", cyan) + Colors.toString("[50, 2147483647]", Colors.BLUE + Colors.HIGH_INTENSITY), error, 50, 2147483647));
+                    b.generarClientes(getInt(Colors.toString("Cuantos clientes desearía generar? ", cyan) + Colors.toString(" [50, 2147483647]", Colors.BLUE + Colors.HIGH_INTENSITY), error, 50, 2147483647));
                     break;
                 case 3:
                     opcion2 = b.simular();

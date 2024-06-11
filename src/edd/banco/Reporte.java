@@ -1,6 +1,8 @@
-
 package edd.banco;
 
+/**
+ * Clase que representa un reporte del sistema de turnos del banco.
+ */
 public class Reporte {
 
     private int tiempoMaximoEspera;
@@ -16,6 +18,9 @@ public class Reporte {
 
     private int cantidad;
 
+    /**
+     * Constructor para crear un reporte con valores iniciales.
+     */
     public Reporte() {
         this.tiempoMaximoEspera = Integer.MIN_VALUE;
         this.tiempoPromedioEspera = 0.0;
@@ -31,6 +36,11 @@ public class Reporte {
         this.cantidad = 0;
     }
 
+    /**
+     * Agrega un turno al reporte y actualiza las estadísticas.
+     *
+     * @param t El turno a agregar.
+     */
     public void agregarTurno(Turno t) {
         Tramite r;
         int h, m, v;
@@ -64,6 +74,11 @@ public class Reporte {
         cantidad++;
     }
 
+    /**
+     * Elimina un turno del reporte y actualiza las estadísticas.
+     *
+     * @param t El turno a eliminar.
+     */
     public void sacarTurno(Turno t) {
         Tramite r;
 
@@ -76,8 +91,19 @@ public class Reporte {
         }
     }
 
+    /**
+     * Devuelve una representación en cadena del reporte.
+     *
+     * @return Una cadena que representa el reporte.
+     */
     @Override
     public String toString() {
-        return "<Tiempo Maximo de Espera: " + tiempoMaximoEspera + ", Tiempo Promedio de Espera: " + tiempoPromedioEspera + ", #Maximo de Ventanillas: " + maximoVentanillas + ", #Promedio de Ventanillas: " + promedioVentanillas + ", #Maximo de Asesoreses: " + maximoAsesores + ", #Promedio de Asesoreses: " + promedioAsesores + ", Cantidad de turnos: " + cantidad + ">";
+        return "<Tiempo Maximo de Espera: " + tiempoMaximoEspera + 
+               ", Tiempo Promedio de Espera: " + tiempoPromedioEspera + 
+               ", #Maximo de Ventanillas: " + maximoVentanillas + 
+               ", #Promedio de Ventanillas: " + promedioVentanillas + 
+               ", #Maximo de Asesores: " + maximoAsesores + 
+               ", #Promedio de Asesores: " + promedioAsesores + 
+               ", Cantidad de turnos: " + cantidad + ">";
     }
 }
